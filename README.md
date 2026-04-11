@@ -64,7 +64,3 @@ To add a new language — edit the `detect_language()` match in `indexer.rs`.
 To improve chunking — look into `chunker.rs`.
 
 ---
-
-## License
-
-MIT
