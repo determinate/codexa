@@ -1,0 +1,48 @@
+[package]
+name = "codexa"
+version = "0.2.0"
+edition = "2021"
+description = "AI-ready codebase indexer — generates context + vector search for Claude, GPT, and other AI agents"
+license = "MIT"
+repository = "https://github.com/yourname/codexa"
+keywords = ["ai", "claude", "context", "indexer", "vector-search"]
+categories = ["command-line-utilities", "development-tools"]
+
+[[bin]]
+name = "codexa"
+path = "src/main.rs"
+
+[dependencies]
+clap = { version = "4", features = ["derive"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+toml = "0.8"
+walkdir = "2"
+ignore = "0.4"           # respects .gitignore like ripgrep
+anyhow = "1"
+colored = "2"
+indicatif = "0.17"
+chrono = { version = "0.4", features = ["serde"] }
+tokio = { version = "1", features = ["full"] }
+reqwest = { version = "0.12", features = ["json"] }
+ort = { version = "2.0.0-rc.9", features = ["load-dynamic", "ndarray"] }
+tokenizers = "0.19"
+ndarray = "0.17"
+
+# SQLite vector store (sqlite-vec extension)
+rusqlite = { version = "0.31", features = ["bundled"] }
+sqlite-vec = "0.1"                      # sqlite-vec extension via Rust
+
+# pgvector (optional, feature-gated)
+tokio-postgres = { version = "0.7", optional = true }
+pgvector = { version = "0.4", features = ["postgres"], optional = true }
+
+[features]
+default = ["sqlite"]
+sqlite = []
+postgres = ["dep:tokio-postgres", "dep:pgvector"]
+
+[profile.release]
+opt-level = 3
+lto = true
+strip = true
