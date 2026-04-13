@@ -79,4 +79,4 @@ Your contributions are provided "as is" without warranties of any kind.
 
 ---
 
-*Questions? Open an issue or email your@email.com*
+*Questions? Open an issue or email evrey2696@gmail.com*
