@@ -19,7 +19,7 @@ First off — thank you! Every PR, bug report, and idea makes codexa better.
 ## Development setup
 
 ```bash
-git clone https://github.com/yourname/codexa
+git clone https://github.com/determinate/codexa
 cd codexa
 cargo build
 cargo test
@@ -109,4 +109,4 @@ fn chunk_your_lang(lines: &[&str], max: usize) -> Vec<(usize, usize, ChunkKind)>
 
 ## Questions?
 
-Open an issue or email your@email.com.
+Open an issue or email evrey2696@gmail.com.
