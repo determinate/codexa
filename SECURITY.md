@@ -26,7 +26,7 @@ This keeps the details private until a fix is released.
 
 ### Option 2 — Email
 
-Send details to: **your@email.com**  
+Send details to: **evrey2696@gmail.com**  
 Subject: `[codexa] Security vulnerability`
 
 Encrypt with PGP if possible (key: _add your PGP key or keybase link here_).
